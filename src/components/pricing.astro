@@ -1,0 +1,120 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+
+---
+
+<ContentSection title="Pricing & Plans" id="pricing">
+  <Fragment slot="lead">
+    We have plans to fit <span class="text-primary">any budget</span>. Book a <span class="text-primary">call</span> today to see which plan is right for your needs. 
+
+  </Fragment>
+  <div class="mx-auto flex flex-col gap-3 font-bold">
+    <div class="flex gap-4 flex-wrap justify-between">
+      <p>Predictable Pricing</p>
+      <p>Month to Month</p>
+    </div>
+    <div class="flex gap-4 flex-wrap justify-between">
+      <p>Cancel Anytime</p>
+      <p>Easy Integration</p>
+    </div>
+  </div>
+  <div class="flex flex-col lg:flex-row gap-6 justify-between w-full max-w-6xl">
+    <div class="p-4 border-2 bg-offset w-full lg:w-1/3">
+      <p class="font-semibold text-xl">Starter</p>
+      <p class="mt-3 text-xs">Best for small businesses, landing pages, sites with a few pages, blogs, and portfolios. Perfect for recurring adjustments and regular maintenance.</p>
+      <div class="mt-4 flex gap-2">
+        <p class="text-4xl font-bold">$1200</p><p class="text-xs text-gray-400 self-center">per month</p>
+      </div>
+      <a
+        href="#contact-us"
+        class="mt-4 flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+      >
+        <span>Get Started</span>
+      </a>
+      <div class="mt-6">
+        <div class="flex gap-2 items-center">
+          <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+          <p>Up to 4 projects or pages</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+          <p>No Code tools & integrations</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative p-4 border-2 bg-offset w-full lg:w-1/3">
+      <div class="absolute right-4 -top-4 text-negative bg-negative px-4 rounded-full text-sm">Most Popular <span class="absolute -top-3 right-0">⭐️</span></div>
+      <p class="font-semibold text-xl">Growth</p>
+      <p class="mt-3 text-xs">Best for medium sites with many features, e-commerce sites, and sites that have lots of dynamic, complex needs and further ongoing support.</p>
+      <div class="mt-4 flex gap-2">
+        <p class="text-4xl font-bold">$1500</p><p class="text-xs text-gray-400 self-center">per month</p>
+      </div>
+      <a
+        href="#contact-us"
+        class="mt-4 flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+      >
+        <span>Get Started</span>
+      </a>
+      <div class="mt-6">
+        <div class="flex gap-2 items-center">
+          <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+          <p>Up to 8 projects or pages</p>
+        </div>
+        
+        <div class="flex gap-2 items-center">
+          <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+          <p>No Code tools & integrations</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 border-2 bg-offset w-full lg:w-1/3">
+      <p class="font-semibold text-xl">Unlimited</p>
+      <p class="mt-3 text-xs">Best for large sites, agencies looking to outsource development work, or for companies that need ongoing development software applications.</p>
+      <div class="mt-4 flex gap-2">
+        <p class="text-4xl font-bold">$2000</p><p class="text-xs text-gray-400 self-center">per month</p>
+      </div>
+      <a
+        href="#contact-us"
+        class="mt-4 flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+      >
+        <span>Get Started</span>
+      </a>
+      <div class="mt-6">
+        <div class="flex gap-2 items-center">
+          <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+          <p>Unlimited projects or pages</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+          <p>Custom application software</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-4 border-2 bg-offset w-full max-w-6xl">
+    <p class="font-semibold text-xl">Included with all plans</p>
+    <div class="mt-6">
+      <div class="flex gap-2 items-center">
+        <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+        <p>1 project at a time</p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+        <p>Sites built with Webflow</p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+        <p>Unlimited Requests & Revisions</p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+        <p>Con contracts, cancel anytime</p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <Icon class="h-4 text-pink-500 flex-shrink-0" pack="mdi" name="check-circle"/>
+        <p>Ongoing support for projects and troubleshooting</p>
+      </div>
+    </div>
+  </div>
+</ContentSection>

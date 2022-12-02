@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Website Design and Development",
+    description:
+      "We take new and existing designs and craft them into beautiful, interactive, fast websites with Webflow.",
+    icon: "mdi:laptop",
+    options: [
+      "Landing Pages",
+      "Small & Large Webites",
+      "E-Commerce",
+      "Microsites",
+      "Blogs"
+    ]
+  },
+  {
+    title: "Application Development",
+    description:
+      "Whether you need a web or mobile application, or need a backend API, we build all the things.",
+    icon: "mdi:application-brackets-outline",
+    options: [
+      "Web Applications",
+      "Mobile Applications",
+      "Backend APIs",
+      "Microservices",
+      "Internal Tools"
+    ]
+  },
+  {
+    title: "Integrations and Automation",
+    description:
+      "We integrate your tools with your site and automate workflows to keep your business running smoothly.",
+    icon: "mdi:directions-fork",
+    options: [
+      "Connect 3rd Party apps & tools",
+      "Marketing campaign forms",
+      "Performance Analytics",
+      "Security and Monitoring",
+      "Workflow Automation",
+    ]
+  }
+];
+---
+
+<ContentSection title="What We Do" id="services">
+  <Fragment slot="lead">
+    Extensibl Media is the <span class="text-primary">missing piece</span> for startups, businesses and design agencies looking to outsource web development. 
+
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map((feature) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={feature.icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{feature.title}</p>
+          <p class="text-center text-offset text-sm">{feature.description}</p>
+          <div class="mt-4 w-full">
+            <ul>
+            {feature.options.map((option: string) => (
+              <li class="flex items-center gap-2"><Icon class="h-4 text-pink-500" pack="mdi" name="check-circle"/>{option}</li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

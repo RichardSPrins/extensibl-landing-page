@@ -8,6 +8,7 @@ export interface FeatureItem {
   description: string;
   icon: string;
   title: string;
+  options: string[];
 }
 
 export interface FooterLink {
@@ -19,6 +20,7 @@ export interface FooterLink {
 export interface NavItem {
   title: string;
   url: string;
+  button?: boolean;
 }
 
 export interface ShowcaseSite {

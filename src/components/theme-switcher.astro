@@ -51,6 +51,7 @@ import { Icon } from "astro-icon";
     const themeNext = getThemeNext();
     document.documentElement.dataset.theme = themeNext;
     localStorage.setItem("theme", themeNext);
+    console.log("switching theme", themeNext)
     updateIcon();
   });
 

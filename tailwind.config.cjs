@@ -14,10 +14,12 @@ module.exports = {
       textColor: {
         default: "var(--color-text)",
         offset: "var(--color-text-offset)",
+        negative: "var(--color-text-negative)",
       },
       backgroundColor: {
         default: "var(--color-background)",
         offset: "var(--color-background-offset)",
+        negative: "var(--color-background-negative)",
       },
       borderColor: {
         default: "var(--color-border)",

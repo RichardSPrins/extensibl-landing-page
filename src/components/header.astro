@@ -4,9 +4,10 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
+  { title: "Services", url: "#services" },
+  { title: "Pricing", url: "#pricing" },
+  { title: "How It Works", url: "#our-process" },
+  {title: "Get Started", url: "#contact-us", button: true}
 ];
 ---
 
@@ -15,22 +16,32 @@ const navItems: Array<NavItem> = [
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    <h1 class="font-extrabold text-xl">Extensibl <span class="gradient-text font-extrabold text-xl">Media</span></h1>
+    <!-- <Icon name="logomark" class="h-10" />
+    <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
   </a>
   <div>
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
         <ul class="flex items-center gap-6">
           {
-            navItems.map(({ title, url }) => (
+            navItems.map((item: NavItem) => {
+              return item?.button ? (
+                <li>
+                  <div class="gradient-bg py-2 px-3 rounded-lg text-white">
+                    <a class="text-sm hover:text-white" href={item.url}>
+                      {item.title}
+                    </a>
+                  </div>
+                </li>
+              ) : (
               <li>
-                <a class="text-sm" href={url}>
-                  {title}
+                <a class="text-sm" href={item.url}>
+                  {item.title}
                 </a>
               </li>
-            ))
+            )
+            })
           }
         </ul>
       </nav>
@@ -63,13 +74,23 @@ const navItems: Array<NavItem> = [
           <nav>
             <ul class="flex flex-col">
               {
-                navItems.map(({ title, url }) => (
+                navItems.map((item: NavItem) => {
+                  return item?.button ? (
+                    <li>
+                      <div class="gradient-bg py-3 px-4 rounded-lg text-white w-fit mx-auto">
+                        <a class="block text-xl hover:text-white" href={item.url}>
+                          {item.title}
+                        </a>
+                      </div>
+                    </li>
+                  ) : (
                   <li>
-                    <a class="block py-4 text-center text-xl" href={url}>
-                      {title}
+                    <a class="block py-4 text-center text-xl" href={item.url}>
+                      {item.title}
                     </a>
                   </li>
-                ))
+                )
+                })
               }
             </ul>
           </nav>
